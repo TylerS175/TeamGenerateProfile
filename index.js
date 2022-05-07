@@ -185,4 +185,29 @@ const addManager = () => {
         })
     };
 // Function to Generate HTML page file
+const writeFile = data => {
+    fs.writeFile ('./dist/index.html', data, err => {
+        // The error scenario 
+        if (err) {
+            console.log (err);
+            return;
+            //Success on the profile being create 
+        } else {
+            console.log("Your team profile has been successfully created! Route to the index.html")
+
+        }
+    })
+};
+
+addManager()
+    .then(addEmployee)
+    .then(teamArray => {
+        return generateHTML(teamArray);
+    })
+    .then(pageHTML => {
+        return writeFile(pageHTML);
+    })
+    .catch(err => {
+        console.log(err);
+    });
 
