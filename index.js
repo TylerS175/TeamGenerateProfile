@@ -163,4 +163,26 @@ const addManager = () => {
             default: false 
         }
         ])
-    }
+        .then(employeeData => {
+            // Information data for the employee types
+            let { name, id, email, role, github, school, confirmAddEmployee } = employeeData;
+            let employee;
+
+            if (role === "Engineer") {
+                employee = new Engineer (name, id, email, github);
+                console.log(employee);
+            } else if (role === "Intern") {
+                employee = new Intern (name, id, email, school);
+                console.log(employee);
+            }
+            teamArray.push(employee);
+
+            if (confirmAddEmployee) {
+                return addEmployee(teamArray);
+            } else {
+                return teamArray;
+            }
+        })
+    };
+// Function to Generate HTML page file
+
