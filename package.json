@@ -2,5 +2,27 @@
   "dependencies": {
     "inquirer": "^8.2.4",
     "jest": "^28.1.0"
-  }
+  },
+  "name": "index.js",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TylerS175/TeamGenerateProfile.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TylerS175/TeamGenerateProfile/issues"
+  },
+  "homepage": "https://github.com/TylerS175/TeamGenerateProfile#readme"
 }
